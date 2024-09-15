@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ViewTransitions } from "next-view-transitions";
 import { ThemeProvider } from "@/components/c/theme-provider";
-import ModeToggle from "@/components/c/modeToggle";
-import { HoverCarsd } from "@/components/c/hover-card"; // Import HoverCard
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "next-view-transitions";
-import { HoverCarsd } from "@/components/c/hover-card";
 import ModeToggle from "@/components/c/modeToggle";
 
 function AnimatedName() {

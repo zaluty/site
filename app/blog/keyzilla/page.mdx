@@ -1,0 +1,33 @@
+import { Animatedname } from "@/app/n/animated-name.tsx";
+import { AnimatedName } from "@/app/n/animated-name.tsx";
+import { HoverCarsd } from "@/components/c/hover-card.tsx";
+import Image from "next/image";
+export const metadata = {
+  title: "projects",
+};
+
+export function Small({ children }) {
+  return (
+    <small className="flex text-sm text-muted-foreground -mt-3 mb-3">
+      {children}
+    </small>
+  );
+}
+
+# Keyzilla
+
+Commiting .env to github has been a pain for me since i started coding, whenever i have a new project idea i rush a .env file to github and then i have to go back and remove it.
+this is where keyzilla comes in, it allows you to manage your API keys in a centralized way and give you a global overview of who has access to what.
+
+## How it works
+
+it uses [clerk](https://clerk.com) to manage RBAC (Role based access) for each member of an organization.
+you might be wondering why not use my own custom solution ? well, working with user sensitive data is a big deal and i don't want to deal with that, users want their data secured and encrypted at rest and in transit.
+
+## how to use it
+
+first you need to delete that .env file from your project and head back to [dashboard](https://keyzilla.vercel.app/dashboard), create a new organization(optional) and a new project
+
+then head to the project page add your api keys and choose who has access to what and the API key environement (server | client)
+
+![image](https://github.com/abdullah-khatib-1/keyzilla/blob/main/public/create.png?raw=true)

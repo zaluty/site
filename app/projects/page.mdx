@@ -1,0 +1,47 @@
+import { Animatedname } from "@/app/n/animated-name.tsx";
+import { AnimatedName } from "@/app/n/animated-name.tsx";
+import { HoverCarsd } from "@/components/c/hover-card.tsx";
+export const metadata = {
+  title: "projects",
+};
+
+export function Small({ children }) {
+  return (
+    <small className="flex text-sm text-muted-foreground -mt-3 mb-3">
+      {children}
+    </small>
+  );
+}
+
+# Projects
+
+<AnimatedName />
+
+On a mission to inspire young developers to code and build products and get along with AI instead of taking it as a threat.
+
+## keyzilla
+
+<Small>CEO (what even is that)</Small>
+Since i started coding, i've been commiting .env files to github and always had
+a question in mind how do managers keep track of API keys, how do they know who
+has access to what?, its true there are tools out there like
+[infisical.com](https://infisical.com) but they are complex and meant to be used
+by big companies so i build my own minimal software solution check it out here
+minimal software solution check it out here
+[keyzilla](https://keyzilla.vercel.app) or the [blog](/blog/keyzilla) post i
+wrote on it
+
+## Ytbuddy
+
+<Small>CEO or whatever</Small>
+
+Ytbuddy is a tool for youtube creators to help them understand their audience and improve their content.
+it uses AI to analyze the comments and give the creator insights on what the audience likes and dislikes.
+give them a global overview of their channel performance to know what stack i used, check the blog post i wrote on it
+[Ytbuddy](/blog/ytbuddy)
+
+## Privacify
+
+privacify is meant for people who take their privacy seriously yet lazy to read the privacy policies of every app they use.
+it uses [Vercel AI SDK ](https://sdk.vercel.ai) and [gemini](https://gemini.google/) to summarize the privacy policies and tell you if you should use the app or not based on the summary.
+here is the [blog post](/blog/privacify) , and the [website](https://privacify-blue.vercel.app)

@@ -1,9 +1,9 @@
-import { Animatedname } from "@/app/n/animated-name.tsx";
 import { AnimatedName } from "@/app/n/animated-name.tsx";
-import { HoverCarsd } from "@/components/c/hover-card.tsx";
+import { HoverCard } from "@/components/c/hover-card.tsx";
 import Image from "next/image";
+
 export const metadata = {
-  title: "projects",
+  title: "Keyzilla: Secure API Key Management",
 };
 
 export function Small({ children }) {
@@ -14,20 +14,26 @@ export function Small({ children }) {
   );
 }
 
+<AnimatedName />
+
 # Keyzilla
 
-Commiting .env to github has been a pain for me since i started coding, whenever i have a new project idea i rush a .env file to github and then i have to go back and remove it.
-this is where keyzilla comes in, it allows you to manage your API keys in a centralized way and give you a global overview of who has access to what.
+As developers, we've all been there: in the excitement of starting a new project, we accidentally commit our .env file to GitHub. Then comes the scramble to remove it and update our git history. This common pitfall inspired the creation of Keyzilla – a tool designed to streamline API key management and enhance security.
 
-## How it works
+## The Problem Keyzilla Solves
 
-it uses [clerk](https://clerk.com) to manage RBAC (Role based access) for each member of an organization.
-you might be wondering why not use my own custom solution ? well, working with user sensitive data is a big deal and i don't want to deal with that, users want their data secured and encrypted at rest and in transit.
+Keyzilla offers a centralized solution for managing your API keys, providing a global overview of access permissions. It eliminates the risk of exposing sensitive information in your version control system while simplifying key management across your projects and team.
 
-## how to use it
+## How It Works
 
-first you need to delete that .env file from your project and head back to [dashboard](https://keyzilla.vercel.app/dashboard), create a new organization(optional) and a new project
+Keyzilla leverages [Clerk](https://clerk.com) for robust Role-Based Access Control (RBAC). This choice was deliberate – when dealing with sensitive user data, security is paramount. Clerk ensures that your data is encrypted at rest and in transit, providing the level of protection that users expect and deserve.
 
-then head to the project page add your api keys and choose who has access to what and the API key environement (server | client)
+## Getting Started with Keyzilla
 
-![image](https://github.com/abdullah-khatib-1/keyzilla/blob/main/public/create.png?raw=true)
+1. **Ditch the .env**: First, remove that pesky .env file from your project.
+2. **Set Up Your Dashboard**: Head to the [Keyzilla dashboard](https://keyzilla.vercel.app/dashboard) and create a new organization (optional) and project.
+3. **Manage Your Keys**: Navigate to your project page to add API keys, set access permissions, and specify the environment (server or client) for each key.
+4. **On your local machine**: install the keyzilla cli by running `npm install -g keyzilla-cli`
+   ![Keyzilla Dashboard](https://github.com/abdullah-khatib-1/keyzilla/blob/main/public/create.png?raw=true)
+
+With Keyzilla, you can focus on building your project, confident that your API keys are securely managed and easily accessible to the right team members.

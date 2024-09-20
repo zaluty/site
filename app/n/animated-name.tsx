@@ -4,8 +4,8 @@ import { Link } from "next-view-transitions";
 export function AnimatedName() {
   return (
     <div className="flex items-center justify-between mb-8">
-      <Link href="/" className="font-medium text-gray-400 fade-in">
-        Hamza ( Zaluty)
+      <Link href="/" className="font-medium text-gray-400 fade-in mt-4">
+        Zaluty
       </Link>
       <div>
         <ModeToggle />
@@ -17,7 +17,7 @@ export function AnimatedName() {
 export function Animatedname() {
   return (
     <h1 className="font-medium pt-12 transition-element">
-      <span className="sr-only">Lee Robinson</span>
+      <span className="sr-only">Hamza Essafar</span>
       <span aria-hidden="true" className="block overflow-hidden group relative">
         <span className="inline-block transition-all duration-300 ease-in-out group-hover:-translate-y-full">
           {"hamza essafar".split("").map((letter, index) => (

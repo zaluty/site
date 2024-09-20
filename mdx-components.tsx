@@ -13,19 +13,19 @@ type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 const components: MDXComponents = {
   h1: (props: HeadingProps) => (
     <h1
-      className="font-medium pt-12 mb-0 fade-in text-black dark:text-white"
+      className="font-bold text-3xl mt-8 mb-4 text-black dark:text-white"
       {...props}
     />
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-black dark:text-white font-medium mt-8 mb-3"
+      className="font-semibold text-2xl mt-8 mb-3 text-black dark:text-white"
       {...props}
     />
   ),
   h3: (props: HeadingProps) => (
     <h3
-      className="text-black dark:text-white font-medium mt-8 mb-3"
+      className="font-medium text-xl mt-6 mb-2 text-black dark:text-white"
       {...props}
     />
   ),
@@ -33,22 +33,22 @@ const components: MDXComponents = {
     <h4 className="font-medium text-black dark:text-white" {...props} />
   ),
   p: (props: ParagraphProps) => (
-    <p className="text-black dark:text-white leading-snug" {...props} />
+    <p className="text-black dark:text-white leading-7 mb-4" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol
-      className="text-black dark:text-white list-decimal pl-5 space-y-2"
+      className="text-black dark:text-white list-decimal pl-6 mb-4 space-y-2"
       {...props}
     />
   ),
   ul: (props: ListProps) => (
     <ul
-      className="text-black dark:text-white list-disc pl-5 space-y-1"
+      className="text-black dark:text-white list-disc pl-6 mb-4 space-y-2"
       {...props}
     />
   ),
   li: (props: ListItemProps) => (
-    <li className="pl-1 text-black dark:text-white" {...props} />
+    <li className="text-black dark:text-white" {...props} />
   ),
   em: (props: ComponentPropsWithoutRef<"em">) => (
     <em className="font-medium text-black dark:text-white" {...props} />
@@ -117,7 +117,7 @@ const components: MDXComponents = {
   ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
-      className="ml-[0.075em] border-l-3 border-gray-300 dark:border-gray-600 pl-4 text-black dark:text-white"
+      className="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 mb-4 italic text-gray-800 dark:text-gray-200"
       {...props}
     />
   ),

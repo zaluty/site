@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "next-view-transitions";
 import ModeToggle from "@/components/c/modeToggle";
+import { InViewImagesGrid } from "@/components/gellery";
 
 function AnimatedName() {
   return (
@@ -44,46 +45,49 @@ export default function Home() {
       <AnimatedName />
       <div className="space-y-4 leading-snug">
         <p>
-          I&apos;m a 60% fullstack developer, i suck at design but i am
-          learning, optimist. I work at no where i am only 16 years old. my main
-          mission is to embrace the process of learning by doing, building great
-          products and open-sourcing.
+          I'm a passionate 16-year-old fullstack developer on a journey of
+          continuous learning. While I'm still honing my design skills, I
+          approach every challenge with optimism. My mission is to embrace
+          hands-on learning, create impactful projects, and contribute to
+          open-source projects.
         </p>
-        <h4>i am insipired by many people, like:</h4>
+        <h4>I draw inspiration from several industry leaders:</h4>
         <ul className="list-disc pl-5">
           <li className="mb-2">
-            Lee Robinson (you can judge by the design of this website)
+            Lee Robinson (whose design influence you might notice on this
+            website)
           </li>
           <li className="mb-2">
-            Teo from t3.gg (web stuff is like a sip of water to me)
+            Theo from t3.gg (who makes complex web concepts feel effortless)
           </li>
           <li className="mb-2">
-            Primeagen (he is a legend, he is the reason i started learning go)
+            ThePrimeagen (a legendary figure who inspired my journey into Go
+            programming)
           </li>
         </ul>
         <span className="flex">
-          here is my projects{" "}
+          Explore my work:
           <Link
             href="/projects"
             className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-500 ml-2 relative after:content-['→'] after:ml-0.5 after:absolute after:transition-transform after:duration-300 after:left-full after:translate-x-0 hover:after:translate-x-full"
           >
-            projects
+            Projects
           </Link>
-          <span className="ml-9">and my blog</span>
+          <span className="ml-9">and</span>
           <Link
             href="/blog"
             className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-500 ml-2 relative after:content-['→'] after:ml-0.5 after:absolute after:transition-transform after:duration-300 after:left-full after:translate-x-0 hover:after:translate-x-full"
           >
-            blog
+            Blog
           </Link>
         </span>
         <p>
-          sometimes when i feel like it i create educational content for
-          developers, teaching them about various technologies and tools. like:
-          TypeScript, React, Next.js, and more. .
+          I'm passionate about creating educational content for developers,
+          sharing insights on cutting-edge technologies and tools such as
+          TypeScript, React, Next.js, and more.
         </p>
         <p>
-          i have some tools for developers, like:
+          Check out my developer tools:
           <span className="mx-2">
             <Link
               href="https://keyzilla.vercel.app"
@@ -91,20 +95,21 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              keyzilla
+              Keyzilla
             </Link>
           </span>
-          and for non-developers, like:
+          And for non-developers:
           <span className="mx-2">
             <Link
               href="https://ytbuddy.com"
               className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-500 after:content-['_↗']"
               aria-disabled={true}
             >
-              ytbuddy
+              YTBuddy
             </Link>
           </span>
         </p>
+        <InViewImagesGrid />
       </div>
     </>
   );

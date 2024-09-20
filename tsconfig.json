@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "app/h/page.mdx"  ],
+, "app/h/page.mdx", "next.config.mts"  ],
   "exclude": [
     "node_modules"
   ]

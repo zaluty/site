@@ -45,8 +45,8 @@ export default function Home() {
       <AnimatedName />
       <div className="space-y-4 leading-snug">
         <p>
-          I'm a passionate 16-year-old fullstack developer on a journey of
-          continuous learning. While I'm still honing my design skills, I
+          I&apos;m a passionate 16-year-old fullstack developer on a journey of
+          continuous learning. While I&apos;m still honing my design skills, I
           approach every challenge with optimism. My mission is to embrace
           hands-on learning, create impactful projects, and contribute to
           open-source projects.
@@ -82,7 +82,7 @@ export default function Home() {
           </Link>
         </span>
         <p>
-          I'm passionate about creating educational content for developers,
+          I&apos;m passionate about creating educational content for developers,
           sharing insights on cutting-edge technologies and tools such as
           TypeScript, React, Next.js, and more.
         </p>

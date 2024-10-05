@@ -1,6 +1,5 @@
 "use client";
 import ModeToggle from "@/components/c/modeToggle";
-import { Link } from "next-view-transitions";
 import { useRouter } from "next/navigation";
 export function AnimatedName() {
   const router = useRouter();

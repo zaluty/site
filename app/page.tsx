@@ -1,8 +1,8 @@
+"use client";
 import React from "react";
 import { Link } from "next-view-transitions";
 import ModeToggle from "@/components/c/modeToggle";
 import { InViewImagesGrid } from "@/components/gellery";
-
 function AnimatedName() {
   return (
     <h1 className="font-medium pt-12 transition-element">

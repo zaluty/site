@@ -121,7 +121,7 @@ function GetPosts(): BlogPost[] {
         id: dirName,
         tags: tags
           ? tags[1].split(",").map((tag) => tag.replace(/["']/g, "").trim())
-          : [], // Remove quotes and trim
+          : [],
         author: author ? author[1] : "",
       };
     })

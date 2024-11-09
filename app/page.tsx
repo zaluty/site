@@ -3,10 +3,13 @@ import React from "react";
 import { Link } from "next-view-transitions";
 import ModeToggle from "@/components/c/modeToggle";
 import { InViewImagesGrid } from "@/components/gellery";
+import {  Text } from "@/components/website-navigations";
+import { Button } from "@/components/ui/button";
+
 function AnimatedName() {
   return (
     <h1 className="font-medium pt-12 transition-element">
-      <span className="sr-only">Lee Robinson</span>
+      <span className="sr-only">Hamza Essafar</span>
       <span aria-hidden="true" className="block overflow-hidden group relative">
         <span className="inline-block transition-all duration-300 ease-in-out group-hover:-translate-y-full">
           {"hamza essafar".split("").map((letter, index) => (
@@ -40,21 +43,19 @@ function AnimatedName() {
 }
 
 export default function Home() {
-  const env = process.env.NODE_ENV || "development";
-
-  // Determine if it's production
-  const isProduction = env === "production";
-  const isPreview = process.env.VERCEL_ENV === "preview";
-
-  console.log(`Current environment: ${env}`);
-  console.log(`Is production: ${isProduction}`);
-  console.log(`Is preview: ${isPreview}`);
+  const [open, setOpen] = React.useState(false)
 
   return (
     <>
       <AnimatedName />
-      <div className="space-y-4 leading-snug">
-        <p>
+      <Text open={open} setOpen={setOpen}  />
+      <div className="absolute top-0 right-0 p-4">
+        <Button  size={"sm"}onClick={() => setOpen(true)}>
+          text ?
+        </Button>
+      </div>
+      <div className="space-y-4 leading-snug ">
+        <p className=" text-cyan-600">
           I&apos;m a passionate 16-year-old fullstack developer on a journey of
           continuous learning. While I&apos;m still honing my design skills, I
           approach every challenge with optimism. My mission is to embrace
@@ -62,16 +63,20 @@ export default function Home() {
           open-source projects.
         </p>
         <h4>I draw inspiration from several industry leaders:</h4>
-        <ul className="list-disc pl-5">
+        <ul className="list-disc pl-5 text-yellow-500">
           <li className="mb-2">
-            Lee Robinson (whose design influence you might notice on this
+            <span className="text-blue-500 dark:text-blue-300">
+            Lee Robinson {" "}
+            </span>
+            (whose design influence you might notice on this
             website)
           </li>
+         
           <li className="mb-2">
-            Theo from t3.gg (who makes complex web concepts feel effortless)
-          </li>
-          <li className="mb-2">
-            ThePrimeagen (a legendary figure who inspired my journey into Go
+            <span className="text-blue-500 dark:text-blue-300">
+              ThePrimeagen   {" "}
+            </span>
+              (a legendary figure who inspired my journey into Go
             programming)
           </li>
         </ul>
@@ -91,10 +96,8 @@ export default function Home() {
             Blog
           </Link>
         </span>
-        <p>
-          I&apos;m passionate about creating educational content for developers,
-          sharing insights on cutting-edge technologies and tools such as
-          TypeScript, React, Next.js, and more.
+        <p className="mt-4 text-orange-500">
+          I&apos;m passionate about creating tools for developers espcially to help them build better products.
         </p>
         <p>
           Check out my developer tools:
@@ -120,6 +123,7 @@ export default function Home() {
           </span>
         </p>
         <InViewImagesGrid />
+
       </div>
     </>
   );

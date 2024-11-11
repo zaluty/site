@@ -4,7 +4,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { ThemeProvider } from "@/components/c/theme-provider";
 import Link from "next/link";
 import { GeistMono } from 'geist/font/mono';
- 
+import { Analytics } from "@vercel/analytics/react"
 
  
 
@@ -41,6 +41,7 @@ export default function RootLayout({
               </main>
               <Footer />
             </div>
+            <Analytics framework="nextjs" debug={false} />
           </ThemeProvider>
         </body>
       </html>

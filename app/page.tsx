@@ -50,7 +50,10 @@ export default function Home() {
       <AnimatedName />
       <Text open={open} setOpen={setOpen}  />
       <div className="absolute top-0 right-0 p-4">
-        <Button  size={"sm"}onClick={() => setOpen(true)}>
+        <Button  
+        size={"sm"}
+        onClick={() => setOpen(true)}
+        >
           text ?
         </Button>
       </div>

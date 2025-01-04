@@ -5,6 +5,7 @@ import ModeToggle from "@/components/c/modeToggle";
 import { InViewImagesGrid } from "@/components/gellery";
 import {  Text } from "@/components/website-navigations";
 import { Button } from "@/components/ui/button";
+ 
 
 function AnimatedName() {
   return (
@@ -124,10 +125,9 @@ export default function Home() {
               YTBuddy
             </Link>
           </span>
-        </p>
+        </p>  
         <InViewImagesGrid />
-
-      </div>
-    </>
+        </div>
+      </>
   );
 }

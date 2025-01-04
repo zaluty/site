@@ -10,5 +10,9 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <>
+  <main className="max-w-[60ch] mx-auto w-full space-y-6">
+  {children}
+  </main>
+  </>;
 }

@@ -5,7 +5,6 @@ import { ThemeProvider } from "@/components/c/theme-provider";
 import Link from "next/link";
 import { GeistMono } from 'geist/font/mono';
 import { Analytics } from "@vercel/analytics/react"
-
  
 
 export const metadata: Metadata = {
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
   },
   description: "fullstack developer, optimist, community builder.",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,11 +36,15 @@ export default function RootLayout({
             <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 text-black dark:text-white">
               <main className="max-w-[60ch] mx-auto w-full space-y-6">
                 {children}
+        <iframe style={{borderRadius:"12px"}} src="https://open.spotify.com/embed/playlist/37i9dQZF1DX186v583rmzp?utm_source=generator" width="100%" height="352" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
               </main>
               <Footer />
             </div>
             <Analytics framework="nextjs" debug={false} />
+            
           </ThemeProvider>
+          
         </body>
       </html>
     </ViewTransitions>
@@ -53,8 +55,8 @@ function Footer() {
   const links = [
     {
       name: "@zaluty",
-      url: "https://x.com/zaluty",
-      description: "Follow me on X",
+      url: "https://github.com/zaluty",
+      description: "Follow me on Github",
       image: "/path/to/image",
       date: new Date(),
     },

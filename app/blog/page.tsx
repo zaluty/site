@@ -33,13 +33,13 @@ export default function BlogPage() {
   return (
     <>
       <AnimatedName />
-      <div className=" flex justify-center items-center">
-        <main className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {GetPosts().map((post, index) => (
-              <Card key={index} className="flex flex-col h-full">
+      <div className="flex justify-center items-center w-full">
+        <main className="w-full max-w-[1600px] lg:max-w-[1200px] mx-auto px-4 sm:px-6 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-6">
+            {GetPosts().then((posts) => posts.map((post, index) => (
+              <Card key={index} className="flex flex-col h-full hover:shadow-lg transition-shadow duration-200">
                 <CardHeader className="p-0">
-                  <div className="relative w-full pt-[56.25%]">
+                  <div className="relative w-full pt-[60%]">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -49,8 +49,8 @@ export default function BlogPage() {
                     />
                   </div>
                 </CardHeader>
-                <CardContent className="flex-grow p-4">
-                  <CardTitle className="text-lg md:text-xl font-semibold mb-2 line-clamp-2">
+                <CardContent className="flex-grow p-3 sm:p-4">
+                  <CardTitle className="text-base sm:text-lg lg:text-xl font-semibold mb-2 line-clamp-2">
                     <Link
                       href={`/blog/${post.slug}`}
                       className="hover:underline"
@@ -58,22 +58,22 @@ export default function BlogPage() {
                       {post.title}
                     </Link>
                   </CardTitle>
-                  <p className="text-gray-600 text-sm md:text-base mb-4 line-clamp-3">
+                  <p className="text-gray-600 text-xs sm:text-sm lg:text-base mb-3 line-clamp-3">
                     {post.excerpt}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {post.tags.map((tag, tagIndex) => (
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2">
+                    {post.tags.map((tag: string, tagIndex: number) => (
                       <Badge
                         key={tagIndex}
                         variant="destructive"
-                        className="text-xs"
+                        className="text-[10px] sm:text-xs"
                       >
                         {tag}
                       </Badge>
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="text-xs md:text-sm text-gray-500 p-4">
+                <CardFooter className="text-[10px] sm:text-xs lg:text-sm text-gray-500 p-3 sm:p-4">
                   <p className="truncate">
                     By{" "}
                     <span className="font-bold text-primary">
@@ -83,7 +83,7 @@ export default function BlogPage() {
                   </p>
                 </CardFooter>
               </Card>
-            ))}
+            )))}
           </div>
         </main>
       </div>
@@ -91,7 +91,12 @@ export default function BlogPage() {
   );
 }
 
-function GetPosts(): BlogPost[] {
+
+
+
+
+async function GetPosts(): Promise<BlogPost[]> {
+"use server"
   const postsDirectory = path.join(process.cwd(), "app", "blog");
   const fileNames = fs.readdirSync(postsDirectory);
 
